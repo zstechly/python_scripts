@@ -53,13 +53,13 @@ sig_out0 = signal.convolve(sig_in,coeffs_input_linear[0:-1:1024])    / 29000;
 sig_out1 = signal.convolve(sig_in,coeffs_input_linear[512:-1:1024])  / 29000;
 sig_out2 = signal.convolve(sig_in,coeffs_input_linear[1024:-1:1024]) / 29000;
 plt.figure()
-plt.plot(sig_in)
+plt.plot(sig_in[100:200])
 plt.hold
-plt.plot(sig_out0,'r')
+plt.plot(sig_out0[100:200],'r')
 plt.hold
-plt.plot(sig_out1,'g')
+plt.plot(sig_out1[100:200],'g')
 plt.hold
-plt.plot(sig_out2,'y')
+plt.plot(sig_out2[100:200],'y')
 plt.title('Input, output')
 plt.show()
 
